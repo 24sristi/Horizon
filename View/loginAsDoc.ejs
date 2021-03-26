@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+        integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+        crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+  
+    <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="/css/loginQuery.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="nav-bar">
+            <div class="logo dj a"><a href="/">Horizon</a></div>
+            <div class="nav-btn ">
+                <ul>
+                    <li><a class="" href="/">Home</a></li>
+                    <% if(role == "doctor" ) {%>
+                        <li><a class="" href="/d/contact">Contact</a></li>
+                        <li><a class="" href="/d/emergency">Emergency</a></li>
+                        <%}else{%>
+                            <li><a class="" href="/p/contact">Contact</a></li>
+                            <li><a class="" href="/p/emergency">Emergency</a></li>
+                        <%}%>
+                         <% if(isLoggedin==0) {%>
+                        <li><a class="" href="/p/login">Login As Patient</a></li>
+                        <%}else{%>
+                            <li><a class="" href="/d/logout">Logout</a></li>
+                        <%}%>
+                </ul>
+            </div>
+            <div class="burger-nav">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+        <div class="nav-btn-slide ">
+            <ul>
+                <li><a class="" href="/">Home</a></li>
+                <% if(role == "doctor" ) {%>
+                    <li><a class="" href="/d/contact">Contact</a></li>
+                    <li><a class="" href="/d/emergency">Emergency</a></li>
+                    <%}else{%>
+                        <li><a class="" href="/p/contact">Contact</a></li>
+                        <li><a class="" href="/p/emergency">Emergency</a></li>
+                    <%}%>
+                    <% if(isLoggedin==0) {%>
+                        <li><a class="" href="/p/login">Login As Patient</a></li>
+                        <%}else{%>
+                            <li><a class="" href="/d/logout">Logout</a></li>
+                        <%}%>
+            </ul>
+        </div>
+
+        <div class="details">
+            <div class="heading">
+                <h1>Login</h1>
+                <h3>Please login to continue as Doctor.</h3>
+            </div>
+            <div class="twoBtns">
+                <div class="login">Login</div>
+                <div class="register">Register</div>
+            </div>
+            <form action="">
+                <label for="Email">Email</label>
+                <input type="email" name="" id="Email">
+                <label for="Pwd">Password</label>
+                <input type="password" name="" id="Pwd">
+                <span id="message"></span>
+                <div class="options">
+                    <div class="submit">Submit</div>
+                    <!-- <div class="forget">Forgot Password?</div> -->
+                </div>
+
+            </form>
+
+        </div>
+        <div class="pic">Keeping You Well!</div>
+    </div>
+    <script src="/js/LoginAsDoc.js"></script>
+</body>
+
+</html>

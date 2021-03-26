@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+        crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+        integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/profile.css">
+    <link rel="stylesheet" href="/css/profileQuery.css">
+    <link rel="stylesheet" href="/css/profilepageQuery.css">
+</head>
+
+<body>
+    <div class="page">
+        <div class="container">
+            <div class="nav-bar">
+                <div class="logo dj a"><a href="/">Horizon</a></div>
+                <div id="headerWrap">
+
+                    <div class="search"><input type="text" name="" id="SearchInput" placeholder="Search"><i
+                            class="fas fa-search" id="searchBtn"></i></div>
+
+                    <div class="nav-btn ">
+                        <ul>
+                            <li><a class="" href="/d/contact">Contact</a></li>
+                            <li><a class="" href="/d/emergency">Emergency</a></li>
+                        </ul>
+                    </div>
+                    <div class="icons">
+                        <i class="fas fa-search" id="searchBtnMobile"></i>
+                        <div class="burger-nav">
+                            <i class="fas fa-bars"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-btn-slide ">
+                <ul>
+                    <li><a class="" href="/d/contact">Contact</a></li>
+                    <li><a class="" href="/d/emergency">Emergency</a></li>
+                    <li><a class="" href="/d/logout">Logout</a></li>
+                </ul>
+            </div>
+            <div class="div1Wrapper">
+                <div class="div1">
+                    <div class="photo"><img src="<%- user.pImage %>" alt="" class="photo"></div>
+                    <div class="name">
+                        <%- user.name %>
+                    </div>
+                    <div class="common" id="option1">
+                        <i class="fas fa-user-circle"></i>Profile
+                    </div>
+                    <div class="common" id="option3"><i class="far fa-hospital"></i>    Emergency</div>
+                    <div class="common" id="option9"><i class="far fa-address-book"></i> Contact Us</div>
+                    <div class="common" id="option4"><i class="fas fa-sign-out-alt"></i>Logout</div>
+
+                </div>
+            </div>
+            <div class="div2 patientbody patientFromDocContainer">
+
+                <div class="first">
+                    <div class="heading">Patient's Profile </div>
+                    <div class="optionsForDoc">
+                        <i class="fas fa-file-prescription" id="pres"></i>
+                        <i class="fas fa-prescription" id="epres"></i>
+                        <i class="fas fa-flask" id="labReport"></i>
+                        <i class="fas fa-user-circle" id="patientProfile"></i>
+
+                    </div>
+                </div>
+                <div class="second ">
+                    <div class="wrap wrapPatientByDoc">
+                        <div class="mainprofile detailBox">
+                            <div class="pDetails">
+                                <div id="name">
+                                    <%- puser.name %>
+                                </div>
+                                <div class="details">
+                                    <div id="email"><span>Email: </span>
+                                        <input type="text" name="" id="pEmail" value=<%- puser.email %> readOnly >
+                                    </div>
+                                    <div id="mobileno"><span>Phone no.:</span>
+                                        <input type="text" name="" id="pPhone" value=<%- puser.phone %> readOnly >
+
+                                    </div>
+                                    <div id="address"><span> Address :</span>
+                                        <input type="text" name="" id="pAddress" value=<%- puser.address %> readOnly >
+
+                                    </div>
+                                    <div id="timing"><span>Age :</span>
+                                        <input type="text" name="" id="pAge" value=<%- puser.age %> readOnly >
+
+                                    </div>
+
+                                </div>
+                                <% if(status=="t" ){ %>
+                                    <div class="status">Following</div>
+                                    <div class="reqBtn">Unfollow</div>
+                                    <% }else if(status=="f" ){ %>
+                                        <div class="status">Pending Request</div>
+                                        <div class="reqBtn">Cancel Request</div>
+                                        <% }else{ %>
+                                            <div class="reqBtn">Send Request</div>
+                                            <% } %>
+
+
+                            </div>
+                            <div class="profilePic">
+                                <img src="<%- puser.pImage %>" alt="">
+                            </div>
+
+                        </div>
+
+                       
+
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="/js/patientProfileViaDoctor.js"></script>
+    <script src="/js/docRequestBtns.js"></script>
+    <script src="/js/header.js"></script>
+    <script src="/js/doctorSearch.js"></script>
+    <script src="/js/SearchMobileView.js"></script>
+    
+
+</body>
+
+</html>

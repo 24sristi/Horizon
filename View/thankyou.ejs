@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Thankyou</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+  integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+  crossorigin="anonymous" />
+
+  <!-- Bootstrap -->
+  <link href="/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/css/thank.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+  <div class="jumbotron active">
+    <div class="nav-bar">
+      <div class="logo dj a"><a href="/">Horizon</a></div>
+      <div class="nav-btn ">
+          <ul>
+              <li><a class="" href="/">Home</a></li>
+              <% if(role == "doctor" ) {%>
+                <li><a class="" href="/d/contact">Contact</a></li>
+                <li><a class="" href="/d/emergency">Emergency</a></li>
+                <%}else{%>
+                    <li><a class="" href="/p/contact">Contact</a></li>
+                    <li><a class="" href="/p/emergency">Emergency</a></li>
+                <%}%>
+                <% if(isLoggedin==0) {%>
+                <li><a class="" href="/p/signup">Signup As Patient</a></li>
+                <li><a class="" href="/d/signup">Signup As Doctor</a></li>
+                <%}else{%>
+                    <li><a class="" href="/p/logout">Logout</a></li>
+                <%}%>
+          </ul>
+      </div>
+      <div class="burger-nav">
+          <i class="fas fa-bars"></i>
+      </div>
+  </div>
+  <div class="nav-btn-slide ">
+      <ul>
+          <li><a class="" href="/">Home</a></li>
+          <% if(role == "doctor" ) {%>
+            <li><a class="" href="/d/contact">Contact</a></li>
+            <li><a class="" href="/d/emergency">Emergency</a></li>
+            <%}else{%>
+                <li><a class="" href="/p/contact">Contact</a></li>
+                <li><a class="" href="/p/emergency">Emergency</a></li>
+            <%}%>
+            <% if(isLoggedin==0) {%>
+                <li><a class="" href="/p/signup">Signup As Patient</a></li>
+                <li><a class="" href="/d/signup">Signup As Doctor</a></li>
+                <%}else{%>
+                    <li><a class="" href="/p/logout">Logout</a></li>
+                <%}%>
+      </ul>
+  </div>
+
+    <div class="container">
+
+      <div class="featured">
+        <div class="row">
+          <div class="col-md-9">
+            <h1>Get Well Soon!</h1>
+            <p>Thankyou for choosing us.<br>
+              It's our pleasure to connect with you!</p>
+            <p>
+              <a class="btn btn-default btn-lg" href="#">Ask A Question</a>
+
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="/js/header.js"></script>
+</body>
+
+</html>

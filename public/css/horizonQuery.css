@@ -1,0 +1,212 @@
+@media only screen and (orientation:landscape) and (max-width:1025px){
+    .div1{
+        background-size: contain;
+    }
+}
+@media only screen and (orientation:landscape) and (max-width:825px){
+    .div1{
+        background-size: contain;
+        background-position: right;
+
+    }
+    .headings{
+        height: fit-content;
+    }
+    .headings li{
+        font-size: large;
+        margin-right: 25px;
+        margin-bottom: 12px;
+
+    }
+    .content{
+        margin-top: 0px;
+        margin-left: 30px;
+    }
+    .content h1{
+        font-size: xx-large;
+        
+    }
+    .content h2{
+        font-size: large;
+        margin-top: 15px;
+    }
+    .content p{
+        font-size: medium;
+    }
+    .loginP,.loginD{
+        font-size: 15px;
+        width: 100px;
+        height: 30px;
+    }
+    .image2,.image3,.image4{
+        background-size: 150%;
+
+    }
+    .content2,.content3,.content4{
+        max-width: 45%;
+    }
+    .div2,.div3,.div4{
+        height: 325px;
+
+    }
+    .content2 h1,.content3 h1,.content4 h1{
+        font-size: 30px;
+    }
+    .content2 p,.content3 p,.content4 p{
+        font-size: 16px;
+    }
+}
+@media only screen and (orientation:landscape) and (max-width:740px){
+    .div1{
+        background-position: left top;
+        
+    }
+    .content{
+        max-width: 55%;
+    }
+}
+@media only screen and (orientation:landscape) and (max-width:650px){
+    .headings li{
+        margin: 40px 30px;
+    }
+}
+@media only screen and (orientation:landscape) and (max-width:570px){
+    .div2,.div3,.div4{
+        height: 275px;
+
+    }
+    .headings li{
+        margin: 30px 20px;
+        font-size: medium;
+    }
+    .content{
+        max-width: 65%;
+    }
+    .content h1{
+        
+        font-size: 30px;
+    }
+    .content h3{
+        font-size: 15px;
+    }
+}
+@media only screen and (orientation:portrait) and (max-width:1026px){
+    .div1{
+        background-size:contain;
+        min-height:45vh;
+    }
+    .content{
+        max-width: 65%;
+        margin-left: 50px;
+    }
+
+}
+@media only screen and (orientation:portrait) and (max-width:770px){
+    .div1{
+        background-size:contain;
+        min-height:45vh;
+    }
+    .content{
+        max-width: 65%;
+       margin-left: 50px;
+       margin-top: 0px;
+    }
+    .content h1{
+        font-size: 45px;
+    }
+    .headings li{
+        margin: 45px 30px;
+    }
+    .image2,.image3,.image4{
+        background-size: 180%;
+    }
+    .content2,.content3,.content4{
+        max-width: 45%;
+    }
+    .div2,.div3,.div4{
+        height:400px
+    }
+}
+@media only screen and (orientation:portrait) and (max-width:450px){
+    .div1{
+        background-size: 120%;
+        min-height: 37vh;
+        background-position: right top;
+    }
+    .headings li{
+        margin: 20px 10px;
+        font-size: medium;
+    }
+    .content{
+        margin-left: 30px;
+        margin-top: 10px;
+        max-width: 80%;
+    }
+
+    .content h1{
+        font-size: 25px;
+    }
+    .content h3{
+        font-size: 15px;
+    }
+    .content h2{
+        margin-top: 15px;
+        font-size: 20px
+    }
+    .loginP,.loginD{
+        height: 30px;
+        width: 90px;
+        font-size: medium;
+        
+    }
+    .loginP{
+        margin-left: 15px;
+    }
+    .div2,.div3,.div4{
+        flex-direction: column;
+        height: 510px;
+    }
+    .div3{
+        flex-direction: column-reverse;
+        height: 500px;
+    }
+    .content2, .content3, .content4 {
+        max-width: 85%;
+        padding-bottom: 50px;
+        border-bottom: 6px double gray;
+    }
+    .content2 h1, .content3 h1, .content4 h1{
+        font-size: 25px;
+        
+    }
+    .content2 p, .content3 p, .content4 p{
+        font-size: 17px;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        
+    }
+     .image2,.image3,.image4{
+         
+        background-size: cover;
+        width: 70%;
+        height: 47%;
+        background-position: center;
+    } 
+    .image3{
+        height: 35%;
+    }
+    .image4{
+        height: 60%;
+    }
+}
+@media only screen and (orientation:portrait) and (max-width:330px){
+    .headings li{
+        font-size: 15px;
+        margin: 20px 10px ;
+    }
+    .content{
+        max-width: 90%;
+        margin-left:10px;
+    }
+}

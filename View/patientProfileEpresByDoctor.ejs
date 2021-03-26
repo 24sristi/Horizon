@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+        crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+        integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/profile.css">
+    <link rel="stylesheet" href="/css/profileQuery.css">
+</head>
+
+<body>
+    <div class="page">
+        <div class="container">
+            <div class="nav-bar">
+                <div class="logo dj a"><a href="/">Horizon</a></div>
+                <div id="headerWrap">
+
+                    <div class="search"><input type="text" name="" id="SearchInput" placeholder="Search"><i
+                            class="fas fa-search" id="searchBtn"></i></div>
+
+                    <div class="nav-btn ">
+                        <ul>
+                            <li><a class="" href="/d/contact">Contact</a></li>
+                            <li><a class="" href="/d/emergency">Emergency</a></li>
+                        </ul>
+                    </div>
+                    <div class="icons">
+                        <i class="fas fa-search" id="searchBtnMobile"></i>
+                        <div class="burger-nav">
+                            <i class="fas fa-bars"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-btn-slide ">
+                <ul>
+                    <li><a class="" href="/d/contact">Contact</a></li>
+                    <li><a class="" href="/d/emergency">Emergency</a></li>
+                    <li><a class="" href="/d/logout">Logout</a></li>
+                </ul>
+            </div>
+            <div class="div1Wrapper">
+                <div class="div1">
+                    <div class="photo"><img src="<%- user.pImage %>" alt="" class="photo"></div>
+                    <div class="name">
+                        <%- user.name %>
+                    </div>
+                    <div class="common" id="option1">
+                        <i class="fas fa-user-circle"></i>Profile
+                    </div>
+                    <div class="common" id="option3"><i class="far fa-hospital"></i> Emergency</div>
+                    <div class="common" id="option9"><i class="far fa-address-book"></i> Contact Us</div>
+                    <div class="common" id="option4"><i class="fas fa-sign-out-alt"></i>Logout</div>
+
+                </div>
+            </div>
+            <div class="div2 patientbody patientFromDocContainer">
+
+                <div class="first">
+                    <div class="heading">E-Prescriptions</div>
+                    <div class="optionsForDoc">
+                        <i class="fas fa-file-prescription" id="pres"></i>
+                        <i class="fas fa-prescription" id="epres"></i>
+                        <i class="fas fa-flask" id="labReport"></i>
+                        <i class="fas fa-user-circle" id="patientProfile"></i>
+
+                    </div>
+                </div>
+                <div class="third">
+                    <% if(status=="not" ){ %>
+                        <h1>You Are Not Connected </h1>
+                        <% }else if(status=="f" ){ %>
+                            <h1>You Are Not Connected.. </h1>
+                            <% }else{ %>
+
+                                <div class="eprescription">
+                                    <div class="header">
+                                        <div class="sno">S. No.</div>
+                                        <div class="rname">Doctor's Name</div>
+                                        <div class="department">Department</div>
+                                        <div class="date">Date</div>
+                                        <div class="format">Problem</div>
+                                        <div class="view">View</div>
+                                    </div>
+                                    <div class="openAddEPrescriptionDialog">Add E-Prescription</div>
+                                    <div id="addEPrescrtion">
+                                        <div>
+                                            <div>
+                                                <label for="addEPrescriptionDate">Date</label>
+                                                <input type="date" name="" id="addEPrescriptionDate">
+                                            </div>
+                                            <div>
+                                                <label for="addEPrescriptionProblemName">Problem Name</label>
+                                                <input type="text" name="" id="addEPrescriptionProblemName">
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <label for="addEprescription">Prescription</label>
+                                            <textarea name="" id="addEprescription" cols="110" rows="10"></textarea>
+
+                                            <span id="addEPrescriptionMess"
+                                                style="color: red; font-weight: 600; padding-left: 50px;"></span>
+                                        </div>
+                                        <div>
+                                            <div class="addBtn addEprescriptionbtn" id="addEPrescription">Add</div>
+                                            <div class="closeBtn">Close</div>
+                                        </div>
+                                    </div>
+                                    <div class="viewEPrescrtion">
+                                        <div>
+                                            <div id="l">
+                                                <h3>Doctors' Name</h3>
+                                                <div class="epDocName"></div>
+                                                <h3>Date</h3>
+                                                <div class="epDate"></div>
+                                            </div>
+                                            <div id="r">
+                                                <h3>Department</h3>
+                                                <div class="epDepartment"></div>
+                                                <h3>Problem</h3>
+                                                <div class="epProblemName"></div>
+                                            </div>
+                                        </div>
+                                        <h3>Prescription</h3>
+                                        <div class="epPrescrtion"></div>
+                                        <div class="epclosebtn">Close</div>
+                                    </div>
+                                    <div class="viewEPrescrtion">
+                                        <div class="epclosebtn">Close</div>
+                                        <div class="epDocName"></div>
+                                        <div class="epDepartment"></div>
+                                        <div class="epDate"></div>
+                                        <div class="epProblemName"></div>
+                                        <div class="epPrescrtion"></div>
+                                    </div>
+
+                                </div>
+                                <% } %>
+
+                </div>
+
+                <div class="options">
+                    <i class="fas fa-user-circle"></i>
+                    <i class="fas fa-flask"></i>
+                    <i class="fas fa-prescription"></i>
+                    <i class="fas fa-file-prescription"></i>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+    </div>
+    <script src="/js/patientProfileViaDoctor.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-storage.js"></script>
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+            apiKey: "AIzaSyAIBcQyroxeFAMA-szVbsE1Z-G_P5rUgFI",
+            authDomain: "infocenter-63fda.firebaseapp.com",
+            projectId: "infocenter-63fda",
+            storageBucket: "infocenter-63fda.appspot.com",
+            messagingSenderId: "964852294927",
+            appId: "1:964852294927:web:d67484651c5b9430848a7a",
+            measurementId: "G-R2YQDMBNSK"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        let storage = firebase.storage();
+    </script>
+    <% if(status=="t" ){ %>
+        <script src="/js/epresByDoc.js"></script>
+        <% } %>
+            <script src="/js/header.js"></script>
+            <script src="/js/doctorSearch.js"></script>
+            <script src="/js/SearchMobileView.js"></script>
+
+
+</body>
+
+</html>

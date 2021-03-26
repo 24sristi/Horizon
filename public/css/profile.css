@@ -1,0 +1,805 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    /* overflow: hidden; */
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .page {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(#409ef533, #c240f533);
+    min-height: fit-content;
+  }
+  
+  .container {
+    width: 100%;
+    overflow: hidden;
+    background-color: #60cbb3;
+    padding: 28px;
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    min-height: 100%;
+    box-shadow: inset 0px 0px 21px 6px white;
+    padding-top: 40px;
+  }
+  .div1Wrapper{
+    /* background-image: url(./bg.png); */
+    background-size: cover;
+    background-repeat: repeat;
+    height: auto;
+    width: 15%;
+    border-radius: 10px;
+    background-color: #60cbb3;
+    
+  }
+  .div1 {
+    padding-top: 60px;
+    backdrop-filter: blur(2px);
+    width: 100%;
+    height: 100%;
+  
+  }
+  .div2 {
+    background-color: white;
+    position: relative;
+  
+    background-size: 100%;
+    width: 85%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 45px;
+  }
+  .photo {
+    background-color: white;
+    height: 130px;
+    width: 130px;
+    border-radius: 100%;
+    margin: auto;
+    margin-bottom: 30px;
+  }
+  .name {
+    color: black;
+    font-weight: 600;
+    margin: auto;
+    width: fit-content;
+    font-size: x-large;
+    margin-bottom: 50px;
+  }
+  .common {
+    display: flex;
+    align-items: center;
+    margin: 20px 25px;
+    font-size: large;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .first {
+    font-size: 40px;
+    font-weight: 800;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px 2px 40px ;
+    align-items: center;
+    border-bottom: 8px  inset;
+    /* padding-left: 20%; */
+  }
+  .common i {
+    font-size: 25px;
+    color: rgba(128, 128, 128, 0.637);
+    background-color: white;
+    margin-right: 25px;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
+  .image img {
+    position: absolute;
+    bottom: -70px;
+    height: 500px;
+    width: 500px;
+    z-index: 0;
+  }
+  
+  .wrap {
+    display: flex;
+    height: fit-content;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 570px;
+    padding-left: 100px;
+    /* display: none; */
+  }
+  
+  .viewBtn, .acceptBtn, .removeBtn, .cancelBtn{
+    width: 110px;
+    height: 40px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #aae4d7;
+    cursor: pointer;
+    font-weight: 600;
+    margin-left: 10px;
+    margin: 0px 5px;
+  }
+
+  
+  .reqBtn, .editBtn, .saveBtn, .ProfilecancelBtn, .status, .cancelinProfile{
+    width: 400px;
+    background-color: #aae4d7;
+    height: 40px;
+    font-size: large;
+    font-weight: 600 !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    transition: 1s;
+    color: black !important;
+    cursor: pointer;
+    margin-top: 25px;
+    margin-left: 35%;
+    box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
+  }
+  
+
+  .saveBtn, .ProfilecancelBtn{
+      display: none;
+  }
+  .reqBtn:hover{
+    transform: scale(1.1);
+  }
+  .mainprofile{
+    display: flex;
+    /* box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px; */
+    flex-direction: row;
+    height: 520px;
+    }
+  .pDetails {
+    width: 450px;
+    height: 550px;
+    margin: 15px;
+    border-radius: 0px;
+    padding: 5px 10px 10px 10px ;
+    /* box-shadow: 12px -12px 2px -1px rgba(0, 0, 255, .2); */
+    /* box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px; */
+    
+  }
+  #name {
+    width: 284px;
+    height: 76px;
+    left: 341px;
+    top: 230px;
+    font-family: Baloo 2;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 76px;
+  }
+  .pDetails span{
+    font-size: 22px;
+    color: black;
+    min-width: 150px;
+    float: left;
+  }
+  .profilePic {
+    width: 270px;
+    height: 370px;
+    margin: 80px 25px;
+    background-color: transparent;
+    background-size: 270px;
+    justify-content: left;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10%;
+    /* min-height: 300px; */
+  }
+  
+  .profilePic img{
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    margin-bottom:20px;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  }
+  .profilePic .edit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: x-large;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+  }
+  .details {
+    width: 500px;
+    height: fit-content;
+    left: 341px;
+    top: 312px;
+  
+    font-family: Baloo 2;
+    font-style: normal;
+    font-weight: bold;
+    font-size: larger;
+    line-height: 57px;
+    color: #757575;
+  }
+  #doctorbg{
+    position: relative;
+      left: -110%;
+      bottom: 240px;
+      height: 150%;
+      width: 150%;
+  }
+  .header{
+    display: flex;
+    width: 100%;
+    /* background-color: #60cbb3;; */
+    height: 50px;
+    align-items: center;
+    font-size: large;
+    font-weight: 600;
+    padding: 0px 20px;
+    margin-top: 20px;
+    justify-content: space-around;
+  }
+  .sno{
+    width: 80px;
+    margin: 0px 3px;
+  }
+  .rname, .pname, .dname{
+    width: 180px;
+    margin: 0px 3px;
+  }
+  .format{
+    width: 180px;
+    margin: 0px 3px;
+  }
+  .department, .address{
+    width: 220px;
+    margin: 0px 3px;
+  }
+  .date, .phone{
+    width: 150px;
+    margin: 0px 5px;
+  }
+  
+  .view, .accept, .cancel, .remove, .Cancel{
+    width: 110px;
+    display: flex;
+    justify-content: center;
+    margin: 0px 5px;
+  }
+  
+  .Reports, li, .pendingReq, .docList, .EPrescriptions,.Prescriptions{
+    padding: 0px;
+    list-style: none;
+  }
+  .item{
+    display: flex;
+    padding: 10px 20px;
+    margin: 15px 0px;
+    align-items: center;
+    background-color: white;
+    border-radius: 15px;
+    justify-content: space-around;
+  }
+  .item .sno{
+    max-width: 80px;
+    min-width: 80px;
+  }
+  .item .rname input, #addpresDocName{
+    max-width: 180px;
+    width: 180px;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.596);
+  }
+  
+  .item .ReportPic input{
+    max-width: 180px;
+    width: 180px;
+    border: none;
+    height: 30px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.596);
+  }
+  .item .date input{
+    max-width: 180px;
+    width: 180px;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.596);
+  }
+  
+  .item .department input{
+    max-width: 220px;
+    width: 220px;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.596);
+  }
+  input{
+    font-size: medium;
+    padding: 10px;
+    height: 30px;
+    margin: 0px 5px;
+    border-left: none;
+    border-top: none;
+    border-right: none;
+  }
+  
+  
+  .addBtn{
+    width: 200px;
+    height: 40px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #aae4d7;
+    font-weight: 600;
+    cursor: pointer;
+    margin: 5px 15px
+  }
+  
+  .btn{
+    display: none ;
+  }
+  
+  .item .ReportName, .PName, .DoctorName, .docName, .presName {
+    max-width: 180px;
+    width: 180px;
+    margin: 0px 5px;
+  }
+  .doctorViewName{
+    cursor: pointer;
+    font-weight: bolder;
+    text-decoration: underline;
+  }
+  .item .Reportpic img {
+    max-width: 130px;
+    width: 80px;
+    margin: 0px 5px;
+    
+  }
+  .item .Reportpic, .prescriptionByDoc, .Eprescriottion, .Prespic{
+    width: 180px;
+    margin: 0px 5px;
+  }
+  .item .date{
+    max-width: 180px;
+    width: 180px;
+    margin: 0px 5px;
+    
+  }
+  .item .department{
+    max-width: 220px;
+    width: 220px;
+    margin: 0px 5px;
+  }
+  
+  .options i{
+    font-size: xx-large;
+    cursor: pointer;
+  }
+  .options{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-top: 2px inset;
+    height: 80px;
+    width :calc(100% - 56px);
+    position: fixed;
+    bottom: 0px;
+    left: 28px;
+    background-color: white;
+    display: none;
+    
+  }
+  
+  .Reports{
+    padding-bottom: 50px;
+  
+  }
+  
+  #addPrescription,#seePrescription,#Prescription, #addprescription{
+    max-width: 250px;
+    width: 250px;
+  }
+  #addprescription{
+    padding: 10px;
+    font-size: medium;
+  }
+  
+  
+  .patientList{
+    display: none;
+    background-color: white;
+    min-height: 70vh;
+  }
+
+  #changeDPBtn{
+    display: none;
+  }
+
+  .openAddEPrescriptionDialog, .openAddPrescriptionDialog, .openAddLBDialog
+  {
+    width: 200px;
+    height: 40px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #aae4d7;
+    font-weight: 600;
+    cursor: pointer;
+    margin: 0px 15px;
+    margin-top: 8px;
+    box-shadow: rgb(0 0 0 / 10%) -4px 9px 25px -6px;
+  }
+
+  .closeBtn
+  {
+    width: 200px;
+    height: 40px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #d7e0de;
+    font-weight: 600;
+    cursor: pointer;
+    margin: 5px 15px;
+    box-shadow: rgb(0 0 0 / 10%) -4px 9px 25px -6px;
+  }
+  
+  #addEPrescrtion{
+    position: absolute;
+    background-color: white;
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    top: 21%;
+    padding: 5%;
+    justify-content: center;
+    align-items: flex-start;
+    border-radius: 10px;
+  }
+
+  #addEPrescrtion label {
+    font-size: large;
+    font-weight: 600;
+    margin: 10px 0px;
+}
+
+  .viewEPrescrtion{
+    position: absolute;
+    background-color: white;
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    top: 21%;
+    padding: 5%;
+    justify-content: center;
+    align-items: flex-start;
+    border-radius: 10px;
+  }
+
+  .epclosebtn {
+    width: 200px;
+    height: 40px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #d7e0de;
+    font-weight: 600;
+    cursor: pointer;
+    margin: 5px 15px;
+    box-shadow: rgb(0 0 0 / 10%) -4px 9px 25px -6px;
+}
+
+
+
+  .third{
+    min-height: 400px;
+  }
+
+  .Remove {
+    width: 110px;
+}
+
+  
+.dj{
+  display: flex;
+  justify-content: center;
+}
+.a{
+  align-items: center;
+}
+.activeBar{
+  display: none !important;
+}
+
+
+.nav-bar{
+  /* background-color:#60cbb3; */
+  align-items: center;
+  background: rgba(96,203,179,.22);
+  width: 100%;
+  height: 60px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  z-index: 5;
+  transition: all .4s ease-in-out;
+  transform-origin: top;
+  transform: scaleY(1);
+  top: 0px;
+  left: 0px;
+  opacity: 95%;
+  border-bottom: 5px inset;
+}
+
+.logo a{
+  font-size: 28px;
+  font-family: cursive;
+  color: white;
+  font-weight: bold;
+  padding-left: 15px;
+  width: fit-content;
+  text-decoration: none;
+}
+.burger-nav{
+  display: none;
+  cursor: pointer;
+}
+.nav-btn{
+  width: 55%;
+  height: 100%;
+}
+.nav-btn-slide{
+  display: none;
+  width: 100%;
+  z-index: 1;
+  top: 0px;
+  left: 0px;
+}
+.nav-btn ul{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: flex-end;
+  align-items: center;
+}
+.nav-btn li {
+  font-size: large;
+  list-style: none;
+  position: relative;
+  margin: 0px 35px;
+  
+}
+.nav-btn li::before{
+  content: "";
+  position: absolute;
+  bottom: -6px; 
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  width: 0%;
+  transition:.4s;
+}
+.nav-btn li:hover::before{
+  width: 100% ;
+  border: 1px solid white;
+  background-color: white;
+}
+
+.nav-btn li a{
+  text-decoration: none;
+  color: white    ;
+  font-weight: 600;
+}
+
+#searchBtnMobile{
+  display: none;
+}
+
+.optionsForDoc {
+  display: flex;
+  width: 50%;
+  /* margin-left: 25%; */
+  justify-content: space-evenly;
+}
+
+.optionsForDoc i {
+  font-size: xxx-large;
+  background-color: #5dbfa5;
+  height: 60px;
+  width: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: 50%;
+}
+
+.detailBox{
+  height: 435px;
+}
+
+.patientbody{
+  margin-top: 0%;
+}
+.patientFromDocContainer{
+  margin-top: 3%;
+
+}
+.heading {
+  font-size: xxx-large;
+  font-weight: bolder;
+  margin-left: 2%;
+}
+
+.wrapPatientByDoc{
+  height: 600px;
+}
+
+
+.icons{
+  display: none;
+}
+
+#headerWrap {
+  display: flex;
+  width: 58%;
+  justify-content: flex-end;
+  align-items: center;
+}
+#addEprescriptionbtn{
+  width: 200px;
+    height: 40px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #aae4d7;
+    font-weight: 600;
+    cursor: pointer;
+    margin: 5px 15px;
+    box-shadow: rgb(0 0 0 / 10%) -4px 9px 25px -6px;
+}
+#addEPrescrtion div:nth-child(1){
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  margin-bottom: 2%;
+}
+#addEPrescrtion div div:nth-child(1){
+  display: flex;
+  flex-direction: column;
+  margin-right: 20%;
+  width: 40%;
+}
+#addEPrescrtion div div:nth-child(2){
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+#addEPrescrtion input{
+  background-color: transparent;
+}
+#addEPrescrtion{
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+#addEPrescrtion div:nth-child(2){
+  display: flex;
+  flex-direction: column;
+}
+#addEPrescrtion div:nth-child(3){
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.viewEPrescrtion div:nth-child(1){
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  margin-bottom: 4%;
+}
+#l{
+  display: flex;
+  flex-direction: column;
+  margin-right: 20%;
+  width: 40%;
+}
+
+.epDocName,.epDepartment{
+  margin-bottom: 30px;
+}
+
+#r{
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+
+#l h3, #r h3{
+  margin-top: 3%;
+}
+
+.epPrescrtion{
+  width: 100%;
+  height: 200px;
+  padding: 20px;
+}
+
+.viewEPrescrtion, #addEPrescrtion{
+  top: 120px;
+}
+
+#addPrescription, #LBDialogBox{
+  display: none;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  position: absolute;
+  top: 100px;  
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 540px ;
+  background-color: white;
+  padding: 10px 80px;
+}
+
+#addPrescription label, #LBDialogBox label{
+  font-size: larger;
+  font-weight: 600;
+  margin-top: 40px;
+}
+#addPrescription input, #LBDialogBox input{
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid gray;
+}
+
+#addpresPic, #addReportPic{
+  width:200px ;
+}
+
+#addPres{
+  margin-top: 30px;
+}
+
+#addPrescription div .addBtn,#addPrescription div .closeBtn,
+#LBDialogBox div .addBtn ,#LBDialogBox div .closeBtn {
+  margin: 10px 50px;
+}
+#addPrescription div, #LBDialogBox div{
+  display: flex;
+}
+
+#LBDialogBox div{
+  margin-top: 10px;
+}
+
+.search input{
+  background-color: transparent;
+  border: none;
+  border-bottom: 3px solid white;
+}
+
+.prescription{
+  min-height: 600px;
+}
+
+.eprescription{
+  min-height: 600px;
+}

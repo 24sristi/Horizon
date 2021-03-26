@@ -1,0 +1,164 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+ 
+
+.container{
+    /* min-height: 100vh; */
+    /* height: fit-content; */
+    height: 100vh;
+    width: 100%;
+    background-color: #BCE4FA;
+    display: flex;
+    padding-left: 5%;
+    background-image: url(/images/contact/medical-emergency-application-2681135-2239881.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right bottom;
+    /* overflow: scroll; */
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    width: 100%;
+    height: fit-content;
+  
+}
+ 
+h1{
+    color: white;
+    font-family: cursive;
+    font-size: 45px;
+    padding-top: 5%;
+    margin-bottom: 70px;
+    width: 100%;
+}
+#email, #mess{
+    width: 400px;
+    height: 50px;
+    border-radius: 10px;
+    padding: 10px;
+    overflow: auto;
+    font-size: 15px;
+    margin-bottom: 30px;
+    background-color: rgba(255, 255, 255, 0.404);
+    font-weight: 600;
+}
+ 
+#mess{
+    height: 200px;
+    margin-bottom: 50px;
+    /* border-radius: 10px; */
+}
+ 
+#subBtn{
+    height: 45px;
+    width: 120px;
+    border-radius: 10px;
+    color: white;
+    background-color:#97C4DE;
+    font-size: large;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 50px;
+    cursor: pointer;
+    margin-bottom: 40px;
+ 
+}
+
+.dj{
+    display: flex;
+    justify-content: center;
+}
+.a{
+    align-items: center;
+}
+.activeBar{
+    display: none !important;
+}
+
+
+.nav-bar{
+    background-color:#2E6C9E;
+    width: 100%;
+    height: 60px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    z-index: 5;
+    transition: all .4s ease-in-out;
+    transform-origin: top;
+    transform: scaleY(1);
+    top: 0px;
+    left: 0px;
+}
+
+.logo a{
+    font-size: 28px;
+    font-family: cursive;
+    color: white;
+    font-weight: bold;
+    padding-left: 15px;
+    width: fit-content;
+    text-decoration: none;
+}
+.burger-nav{
+    display: none;
+    cursor: pointer;
+}
+.nav-btn{
+    width: 55%;
+    height: 100%;
+}
+.nav-btn-slide{
+    display: none;
+    width: 100%;
+    z-index: 1;
+    top: 0px;
+    left: 0px;
+}
+.nav-btn ul{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+.nav-btn li {
+    font-size: large;
+    list-style: none;
+    position: relative;
+    
+}
+.nav-btn li::before{
+    content: "";
+    position: absolute;
+    bottom: -6px; 
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    width: 0%;
+    transition:.4s;
+}
+.nav-btn li:hover::before{
+    width: 100% ;
+    border: 1px solid white;
+    background-color: white;
+}
+
+.nav-btn li a{
+    text-decoration: none;
+    color: white    ;
+    font-weight: 600;
+}
+

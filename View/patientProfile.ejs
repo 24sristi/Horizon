@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+        crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+        integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/profile.css">
+    <link rel="stylesheet" href="/css/profileQuery.css">
+    <link rel="stylesheet" href="/css/profilepageQuery.css">
+</head>
+
+<body>
+    <div class="page">
+        <div class="container">
+            <div class="nav-bar">
+                <div class="logo dj a"><a href="/">Horizon</a></div>
+                <div id="headerWrap">
+
+                    <div class="search"><input type="text" name="" id="SearchInput" placeholder="Search"><i
+                            class="fas fa-search" id="searchBtn"></i></div>
+
+                    <div class="nav-btn ">
+                        <ul>
+                            <li><a class="" href="/p/contact">Contact</a></li>
+                            <li><a class="" href="/p/emergency">Emergency</a></li>
+                        </ul>
+                    </div>
+                    <div class="icons">
+                        <i class="fas fa-search" id="searchBtnMobile"></i>
+                        <div class="burger-nav">
+                            <i class="fas fa-bars"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-btn-slide ">
+                <ul>
+                    <li><a class="" href="/p/pendingRequest">Pending Request</a></li>
+                    <li><a class="" href="/p/doctorList">Doctor's List</a></li>
+                    <li><a class="" href="/p/contact">Contact</a></li>
+                    <li><a class="" href="/p/emergency">Emergency</a></li>
+                    <li><a class="" href="/p/logout">Logout</a></li>
+                </ul>
+            </div>
+            <div class="div1Wrapper">
+                <div class="div1">
+                    <div class="photo"><img src="<%- user.pImage %>" alt="" class="photo"></div>
+                    <div class="name">
+                        <%- user.name %>
+                    </div>
+                    <div class="common" id="option1">
+                        <i class="fas fa-user-circle"></i>Profile
+                    </div>
+                    <div class="common" id="option2"><i class="fas fa-flask"></i></i>Lab Report</div>
+                    <div class="common" id="option3"><i class="fas fa-prescription"></i>Prescription</div>
+                    <div class="common" id="option4"><i class="fas fa-file-prescription"></i>E-prescription</div>
+                    <div class="common" id="option5"><i class="fas fa-hourglass-start"></i>Pending Request</div>
+                    <div class="common" id="option7"><i class="fas fa-user-md"></i>Doctors</div>
+                    <div class="common" id="option6"><i class="fas fa-sign-out-alt"></i>Logout</div>
+
+                </div>
+            </div>
+            <div class="div2" style=" background-image: url(/images/profile/doctor.png);
+            background-size: 46%;
+            background-position: -190px 100px;
+            background-repeat: no-repeat;">
+
+                <div class="first">
+                    <div class="heading">Profile </div>
+                </div>
+                <div class="second">
+                    <div class="wrap">
+                        <div class="mainprofile">
+                            <div class="pDetails">
+                                <div id="name">
+                                    <%- user.name %>
+                                </div>
+                                <div class="details">
+                                    <div id="email"><span>Email: </span>
+                                        <input type="text" name="" id="pEmail" value="<%- user.email %>" readOnly >
+                                    </div>
+                                    <div id="mobileno"><span>Phone no.:</span>
+                                        <input type="text" name="" id="pPhone" value="<%- user.phone %>" readOnly >
+
+                                    </div>
+                                    <div id="address"><span> Address :</span>
+                                        <input type="text" name="" id="pAddress" value="<%- user.address %>" readOnly >
+
+                                    </div>
+                                    <div id="timing"><span>Age :</span>
+                                        <input type="text" name="" id="pAge" value="<%- user.age %>" readOnly >
+
+                                    </div>
+
+                                    <div class="editBtn">Edit</div>
+                                    <div class="saveBtn">Save</div>
+                                    <div class="ProfilecancelBtn">Cancel</div>
+                                </div>
+                            </div>
+                            <div class="profilePic">
+                                <img src="<%- user.pImage %>" alt="">
+                                <label for="changeProfilePic" class="edit" style="cursor: pointer;"
+                                    id="changeDPBtn">Change</label>
+                                <input type="file" name="" id="changeProfilePic" style="display: none;">
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <div class="options">
+                    <i class="fas fa-flask" id="showLB"></i>
+                    <i class="fas fa-prescription" id="showPres"></i>
+                    <i class="fas fa-file-prescription" id="showEpres"></i>
+                    <i class="fas fa-user-circle" id="showProfile"></i>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+    </div>
+    <script src="/js/patientProfile.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-storage.js"></script>
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+            apiKey: "AIzaSyAIBcQyroxeFAMA-szVbsE1Z-G_P5rUgFI",
+            authDomain: "infocenter-63fda.firebaseapp.com",
+            projectId: "infocenter-63fda",
+            storageBucket: "infocenter-63fda.appspot.com",
+            messagingSenderId: "964852294927",
+            appId: "1:964852294927:web:d67484651c5b9430848a7a",
+            measurementId: "G-R2YQDMBNSK"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        let storage = firebase.storage();
+    </script>
+    <script src="/js/patientChanges.js"></script>
+    <script src="/js/header.js"></script>
+    <script src="/js/patientSearch.js"></script>
+    <script src="/js/MenuOptionsForpatient.js"></script>
+    <script src="/js/SearchMobileView.js"></script>
+
+</body>
+
+</html>

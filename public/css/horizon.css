@@ -1,0 +1,138 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    }
+    a{
+        text-decoration: none;
+        color: white;
+    }
+    .container{
+    background-color: #f6fbff79;
+    }
+    .div1{
+        background-image: url(/images/horizon/Capture.JPG);
+        background-repeat: no-repeat;
+        min-height: 89vh;
+        min-width: 100%;
+        padding: 1% 4%;
+        border-radius: 0px 0px 20% 0px;
+    }
+    .headings ul{
+    
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+    color: white;
+    font-size: 25px;
+    
+    
+    }
+    .headings li{
+    margin: 45px 65px ;
+    cursor: pointer;
+    }
+    
+    .content{
+    color: #293754;
+    margin-left: 100px;
+    margin-top: 80px;
+    max-width: 45%;
+    }
+    .content h1{
+    font-size: 60px;
+    font-weight: 600;
+    }
+    .content h3{
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 10px;
+    }
+    .content h2{
+    margin-top: 45px;
+    margin-bottom: 15px;
+    }
+    .buttons{
+    display: flex;
+    
+    }
+    .loginP{
+    margin-left: 50px;
+    border: 1px solid #293754;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    width: 130px;
+    height: 40px;
+    border-radius: 30px;
+    transition: 1s;
+    cursor: pointer;
+    font-weight: 600;
+    color: white;
+    background-color:#293754 ;
+    }
+    .loginD{
+    border: 1px solid #293754;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    width: 130px;
+    height: 40px;
+    border-radius: 30px;
+    transition: 1s;
+    cursor: pointer;
+    font-weight: 600;
+    }
+    .loginP:hover,.loginD:hover{
+    transform: scale(1.1);
+    }
+    .div2,.div3,.div4{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 500px ;
+    width: 100%;
+    }
+    .image2{
+    background-image: url(/images/horizon/lady-sanitizing-her-hands-3247190-2713045.png);
+    background-size: auto;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 40%;
+    background-position: center;
+    }
+    .content2,.content3,.content4{
+    max-width: 35%;
+    }
+    .content2 h1, .content3 h1 , .content4 h1{
+    color: #293754;
+    font-size: 40px;
+    font-weight: 600;
+    }
+    .content2 p , .content3 p , .content4 p{
+    color: #293754;
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 20px;
+    }
+    .image3{
+    background-image: url(/images/horizon/doctor-showing-patient-heart-report-to-medical-assistants-for-better-treatment-2245458-1892306\ \(1\).png);
+    background-size: auto;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 40%;
+    background-position: center;
+    }
+    .image4{
+    background-image: url(/images/horizon/lady-sleeping-and-resting-due-to-sickness-2496326-2121051.webp);
+    background-size: auto;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 40%;
+    background-position: center;
+    }
+    

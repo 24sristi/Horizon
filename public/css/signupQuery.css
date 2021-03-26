@@ -1,0 +1,186 @@
+@media only screen  and (orientation : landscape) and (max-width:1430px) {
+    .page{
+        padding-bottom: 5%;
+    }
+    .details{
+        padding: 50px 60px;
+        
+    }
+}
+@media only screen  and (orientation : landscape) and (max-width:1030px) {
+    .page{
+        height: fit-content;
+        padding-bottom: 5%;
+    }
+    .details{
+        padding: 60px 60px;
+        width: 45%;
+        height: fit-content;
+    }
+    .registerbtn,.loginbtn{
+        margin: 0px;
+    }
+    .option{
+        justify-content: space-around;
+    }
+    .details{
+        height: fit-content;
+    }
+}
+
+
+
+@media only screen and (max-width:610px){
+    .pic img{
+        height: 120px;
+        width: 240px;
+        margin-top: 20px;
+    
+    }
+    .btns{
+        margin-top: 40px;
+        padding-bottom: 80px;
+    }
+    .confirm, .edit{
+        width: 130px;
+        height: 35px;
+        font-size: medium;
+        font-weight: 600;
+        border-radius: 20px;
+        margin-right: 50px;
+    }
+   
+}
+
+@media only screen  and (orientation : landscape) and (max-width:720px) {
+    .active{
+        display: block !important;
+    }
+    .details{
+        padding: 60px 30px;
+    }
+}
+    
+
+@media only screen and (orientation : portrait) and (max-width:1030px){
+    .details{
+        width: 100%;
+        height: fit-content;
+        right: 0px;
+        top: 0px;
+        background: linear-gradient(rgba(255, 255, 255, .7),rgba(255, 255, 255, .4));
+        background-color: white;
+        backdrop-filter: blur(3px);
+    }
+    .page{
+        height: fit-content;
+        height: 100vh;
+        padding-bottom: 5%;
+        padding-top: 2%;
+    }
+    .container{
+        margin-top: 10%;
+        background-color: white;
+        padding: 0px;
+    }
+    .container img{
+        display: none;
+    }
+}
+
+@media only screen and (max-width:800px) and (orientation : portrait) {
+
+    
+    
+    .page{
+        height: fit-content;
+    }
+    .option{
+        justify-content: space-around;;
+    }
+    .registerbtn, .loginbtn{
+        margin: 0px;
+    }
+    .details{
+        padding: 60px 50px;
+    }
+}
+
+@media only screen and (max-width:720px) and (orientation : portrait) {
+    .active{
+        display: block !important;
+    }
+}
+@media only screen and (max-width:510px){
+    .pic img{
+        height: 80px;
+        width: 160px;
+        margin-top: 20px;
+    
+    }
+    .btns{
+        padding-bottom: 40px;
+    }
+}
+@media only screen and (max-width:376px){
+    .pic img{
+        height: 80px;
+        width: 160px;
+        margin-top: 20px;
+    
+    }
+    .btns{
+        padding-bottom: 40px;
+    }
+}
+
+
+@media only screen and (max-width:795px) {
+    .nav-btn{
+        width: 55%;
+    }
+    
+    
+}
+
+@media only screen and (max-width:720px) {
+    .activeBar{
+        display: block !important;
+    }
+    .nav-btn{
+        display: none;
+    }
+    .burger-nav {
+        display: block;
+        color: white;
+        font-size: xx-large;
+        padding: 15px 15px 0px 0px;
+    
+    }
+    .nav-btn-slide {
+        display: none;
+        padding-top: 60px;
+        background-color: #fdeff3;
+        padding-bottom: 15px;
+        transition: all 2s;
+        position: absolute;
+        backdrop-filter: blur(10px);
+    }
+    .nav-btn-slide li{
+        list-style: none;
+        margin: 20px;
+        border-bottom: 3px double gray;
+    }
+    .nav-btn-slide ul a{
+        color: black;
+        text-decoration: none;
+        font-size: large;
+        font-weight: 500;
+        padding-left: 15px;
+    }
+
+    
+}
+
+
+

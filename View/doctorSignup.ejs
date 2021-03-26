@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="/css/signup.css">
+    <link rel="stylesheet" href="/css/signupQuery.css">
+</head>
+
+<body>
+    <div class="page">
+        <div class="nav-bar">
+            <div class="logo dj a"><a href="/">Horizon</a></div>
+            <div class="nav-btn ">
+                <ul>
+                    <li><a class="" href="/">Home</a></li>
+                    <% if(role == "doctor" ) {%>
+                        <li><a class="" href="/d/contact">Contact</a></li>
+                        <li><a class="" href="/d/emergency">Emergency</a></li>
+                        <%}else{%>
+                            <li><a class="" href="/p/contact">Contact</a></li>
+                            <li><a class="" href="/p/emergency">Emergency</a></li>
+                        <%}%>
+                        <% if(isLoggedin==0) {%>
+                        <li><a class="" href="/p/signup">Signup As Patient</a></li>
+                        <%}else{%>
+                            <li><a class="" href="/p/logout">Logout</a></li>
+                    <%}%>
+                </ul>
+            </div>
+            <div class="burger-nav">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+        <div class="nav-btn-slide ">
+            <ul>
+                <li><a class="" href="/">Home</a></li>
+                <% if(role == "doctor" ) {%>
+                    <li><a class="" href="/d/contact">Contact</a></li>
+                    <li><a class="" href="/d/emergency">Emergency</a></li>
+                    <%}else{%>
+                        <li><a class="" href="/p/contact">Contact</a></li>
+                        <li><a class="" href="/p/emergency">Emergency</a></li>
+                    <%}%>
+                    <% if(isLoggedin==0) {%>
+                        <li><a class="" href="/p/signup">Signup As Patient</a></li>                        
+                        <%}else{%>
+                            <li><a class="" href="/p/logout">Logout</a></li>
+                        <%}%>
+            </ul>
+        </div>
+
+        <div class="container">
+            <img src="/images/signup/bk.png" alt="">
+            <div class="details">
+                <div class="option">
+                    <div class="loginbtn">Login</div>
+                    <div class="registerbtn">Register</div>
+                </div>
+                <div class="heading">
+                    <h1>Welcome</h1>
+                    <h3>CREATE YOUR ACCOUNT</h3>
+                </div>
+                <form action="" id="signupForm">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name">
+
+                    <label for="email">Email</label>
+                    <input type="email" name="" id="email">
+
+                    <label for="phone">Mobile Number</label>
+                    <input type="text" name="" id="phone">
+                    <label for="departmentName">Department Name</label>
+                    <input type="text" name="" id="departmentName">
+
+                    <label for="timing">Timing</label>
+                    <input type="text" name="" id="timing">
+
+                    <label for="address">Address</label>
+                    <input type="text" name="" id="address">
+
+                    <label for="fees">Fees</label>
+                    <input type="fees" name="" id="fees">
+
+                    <label for="pw">Password</label>
+                    <input type="password" name="" id="pw">
+
+                    <label for="cpw">Confirm Password</label>
+                    <input type="password" name="" id="cpw">
+
+                    <div class="message"></div>
+                    <div class="submitbtn">SUBMIT</div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+    <script src="/js/signupAsDoctor.js"></script>
+</body>
+
+</html>

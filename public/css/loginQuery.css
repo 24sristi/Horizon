@@ -1,0 +1,205 @@
+@media only screen and (orientation:landscape) and (max-width:1370px){
+    .details{
+        height: 55%;
+        margin-bottom: 140px;
+        justify-content: center;
+
+    }
+}
+@media only screen and (orientation:landscape) and (max-width:1025px){
+    .details{
+        height: 60%;
+        width: 30%;
+        margin-bottom: 140px;
+        justify-content: center;
+
+    }
+    .pic{
+        display: none;
+    }
+}
+@media only screen and (orientation:landscape) and (max-width:825px){
+    .details{
+        height: 95%;
+        margin-bottom: 0px;
+        justify-content: center;
+        /* min-height: 750px; */
+    }
+    .container{
+        min-height: 500px;
+        padding-top: 50px;
+        /* min-width: 90vw; */
+        width: 90vw;
+        margin: 0px;
+    }
+    label{
+        font-size: medium;
+    }
+    input{
+        padding: 5px;
+    }
+    .twoBtns{
+        margin-bottom: 15px;
+    }
+}
+@media only screen and (orientation:landscape) and (max-width:740px){
+    .details{
+        width: 35%;
+    }
+}
+@media only screen and (orientation:landscape) and (max-width:570px){
+    .login,.register{
+        height: 30px;
+        width: 65px;
+        font-size: x-small;
+    }
+    label{
+        font-size: small;
+    }
+    #message{
+        font-size: small;
+
+    }
+    .submit{
+        font-size: small;
+        height: 30px;
+        width: 80px;
+    }
+}
+
+@media only screen and (orientation:portrait) and (max-width:1025px){
+    .details{
+        max-height: 500px;
+        margin-bottom: 300px;
+        width: 32%;
+    }
+    .heading h1{
+        font-size: xxx-large;
+    }
+    .pic{
+        left: 50%;
+        top: 25%;
+    }
+}
+
+@media only screen and (orientation:portrait) and (max-width:768px){
+    .details{
+        max-height: 500px;
+        margin-bottom: 300px;
+        width: 37%;
+    }
+    .pic{
+        left: 45%;
+        top: 25%;
+        font-size: 50px;
+    }
+}
+
+
+@media only screen and (orientation:portrait) and (max-width:450px){
+    .container{
+        padding: 0px;
+    }
+    .details{
+        max-height: 450px;
+        margin-bottom: 400px;
+        width: 70%;
+        margin-top: 300px;
+        margin-left: 15%;
+        padding: 20px;
+    }
+    .pic{
+        display: none;
+    }
+    .heading h1{
+        font-size: xx-large;
+    }
+}
+
+@media only screen and (orientation:portrait) and (max-width: 380px){
+    .details{
+        margin-bottom: 300px;
+    }
+    .heading h1{
+        font-size: xx-large;
+    }
+    label{
+        font-size: medium;
+    }
+    input{
+        padding: 5px;
+    }
+    .login,.register{
+        height: 30px;
+        width: 80px;
+        font-size: small;
+    }
+    .twoBtns{
+        margin-bottom: 20px;
+    }
+    #message{
+        font-size: small;
+    }
+    .submit{
+        margin-top: 0px;
+    }
+}
+
+@media only screen and (orientation:portrait) and (max-width: 320px){
+    .details{
+        margin-bottom: 300px;
+        height: 400px;
+    }
+    
+}
+
+@media only screen and (max-width:795px) {
+    .nav-btn{
+        width: 55%;
+    }
+    
+    
+}
+
+@media only screen and (max-width:720px) {
+    .activeBar{
+        display: block !important;
+    }
+    .nav-btn{
+        display: none;
+    }
+    .burger-nav {
+        display: block;
+        color: white;
+        font-size: xx-large;
+        padding: 15px 15px 0px 0px;
+    
+    }
+    .nav-btn-slide {
+        display: none;
+        padding-top: 60px;
+        background-color: #fda98bc2;
+        padding-bottom: 15px;
+        transition: all 2s;
+        position: absolute;
+        backdrop-filter: blur(10px);
+    }
+    .nav-btn-slide li{
+        list-style: none;
+        margin: 20px;
+        border-bottom: 3px double white;
+    }
+    .nav-btn-slide ul a{
+        color: white;
+        text-decoration: none;
+        font-size: large;
+        font-weight: 500;
+        padding-left: 15px;
+    }
+
+    
+}
+
+
+
+

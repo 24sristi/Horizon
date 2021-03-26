@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+   
+    <link rel="stylesheet" href="/css/emergency.css">
+    <link rel="stylesheet" href="/css/emergencyQuery.css">
+</head>
+<body>
+    <div class="container">
+        <div class="nav-bar">
+            <div class="logo dj a"><a href="/">Horizon</a></div>
+            <div class="nav-btn ">
+                <ul>
+                    <li><a class="" href="/">Home</a></li>
+                    <% if(role == "doctor" ) {%>
+                        <li><a class="" href="/d/contact">Contact</a></li>
+                        <li><a class="" href="/d/emergency">Emergency</a></li>
+                        <%}else{%>
+                            <li><a class="" href="/p/contact">Contact</a></li>
+                            <li><a class="" href="/p/emergency">Emergency</a></li>
+                        <%}%>
+                        <% if(isLoggedin==0) {%>
+                        <li><a class="" href="/p/signup">Signup As Patient</a></li>
+                        <li><a class="" href="/d/signup">Signup As Doctor</a></li>
+                        <%}else{%>
+                            <li><a class="" href="/p/profile">Profile</a></li>
+                            <li><a class="" href="/p/logout">Logout</a></li>
+                        <%}%>
+                </ul>
+            </div>
+            <div class="burger-nav">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+        <div class="nav-btn-slide ">
+            <ul>
+                <li><a class="" href="/">Home</a></li>
+                <% if(role == "doctor" ) {%>
+                    <li><a class="" href="/d/contact">Contact</a></li>
+                    <li><a class="" href="/d/emergency">Emergency</a></li>
+                    <%}else{%>
+                        <li><a class="" href="/p/contact">Contact</a></li>
+                        <li><a class="" href="/p/emergency">Emergency</a></li>
+                    <%}%>
+                    <% if(isLoggedin==0) {%>
+                        <li><a class="" href="/p/signup">Signup As Patient</a></li>
+                        <li><a class="" href="/d/signup">Signup As Doctor</a></li>
+                        <%}else{%>
+                            <li><a class="" href="/p/profile">Profile</a></li>
+                            <li><a class="" href="/p/logout">Logout</a></li>
+                        <%}%>
+            </ul>
+        </div>
+
+        <div class="pic"></div>
+        <div class="info"> 
+            <div class="heading">The Emergency Experts!</div>
+            <ul>
+                <li>National Emergency - 112</li>
+                <li>Police - 100</li>
+                <li>Ambulance - 102</li>
+                <li>Fire - 101</li>
+                <li>Women Helpline - 1091</li>
+
+            </ul>
+        </div>
+        <div class="pic2"></div>
+    </div>
+    <script src="/js/header.js"></script>
+</body>
+</html>

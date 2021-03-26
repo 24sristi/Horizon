@@ -1,0 +1,440 @@
+@media only screen and (orientation: portrait) and (max-width: 1025px)
+{
+   .div1Wrapper{
+       width: 20%;
+   }
+   .common{
+       margin: 20px 15px;
+   }
+   .div2{
+       width: 80%;
+       background-image: none !important;
+   }
+   #addPrescription,#LBDialogBox{
+    top: 100px;
+    padding: 70px 45px;
+    min-height: 85%;
+   }
+
+
+   #addEprescription{
+    margin: 13px;
+   }
+}
+@media only screen and (orientation: portrait) and (max-width: 770px)
+{
+    .div1Wrapper {
+        width: 22%;
+    }
+    .status{
+        margin-left: 20px;
+    }
+    .optionsForDoc i {
+        font-size: xx-large;
+    }
+    .div2 {
+        width: 78%;
+    }
+    .heading{
+        font-size: x-large;
+        font-weight: bold;
+    }
+    .common{
+        font-size: medium;
+    }
+    .common i {
+        font-size: 15px;
+        margin-right: 10px;
+    }
+    .header{
+        font-size: medium;
+    }
+    .item .sno {
+        max-width: 50px;
+        min-width: 50px;
+    }
+    .department, .address{
+        width: 120px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .item .ReportName, .PName, .DoctorName, .docName, .presName {
+        max-width: 150px;
+        width: 150px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .sno {
+        width: 50px;
+    }
+    .rname, .pname, .dname {
+        width: 150px;
+        margin: 0px 3px;
+    }
+    .date .phone{
+        width: 83px;
+    }
+    .view, .accept, .cancel, .remove, .Cancel {
+        width: 50px;
+        display: flex;
+        justify-content: center;
+    }
+    .viewBtn, .acceptBtn, .cancelBtn, .removeBtn {
+        width: 50px;
+        font-size: small;
+    }
+    .cancelBtn{
+        font-size: large;
+    }
+    #addPrescription,#LBDialogBox{
+        top: 72px;
+     
+    }
+    #addPrescription div .addBtn, #addPrescription div .closeBtn, #LBDialogBox div .addBtn, #LBDialogBox div .closeBtn {
+        margin: 10px 20px;
+    }
+    .pDetails {
+        width: 268px;
+    }
+    #name{
+        font-size: 30px;
+    }
+    .pDetails span {
+        font-size: 20px;
+        min-width: 121px;
+    }
+    .wrap{
+        padding-left: 79px;
+    }
+    .reqBtn, .editBtn, .saveBtn, .ProfilecancelBtn, .cancelBtn
+    {
+    margin-left: 9%;
+    }
+    .cancelinProfile{
+        width: 400px;
+    }
+    
+    .viewEPrescrtion, #addEPrescrtion {
+        top: 83px;
+    }
+    #addEPrescription {
+        margin: 19px;
+    }
+    #addEPrescrtion div div:nth-child(1){
+        margin-top: 0px;
+      }
+}
+@media only screen and (orientation: portrait) and (max-width: 500px)
+{
+    .div1Wrapper{
+        display: none;
+    }
+    .options{
+        display: flex;
+    }
+    .div2{
+        width: 100%;
+    }
+    .sno{
+        display: none;
+    }
+    .heading{
+        margin: auto;
+        
+    }
+    .item{
+        font-size: x-small;
+    }
+    .viewBtn, .acceptBtn, .cancelBtn, .removeBtn {
+        font-size: xx-small;
+    }
+    #addPrescription, #LBDialogBox {
+        top: 43px;
+    }
+    #addPrescription div, #LBDialogBox div{
+        flex-direction: column;
+
+    }
+    #LBDialogBox div {
+        margin-top: -11px;
+    }
+    .profilePic {
+        width: 270px;
+        height: 243px;
+        margin: 5px 29px;
+        padding-right: 79px;
+        margin-bottom: 20px;
+    }
+    .pDetails {
+        height: 430px;
+        margin: -51px;
+    }
+    .mainprofile {
+        flex-direction: column-reverse;
+    }
+    .pDetails span {
+        font-size: 17px;
+        min-width: 105px;
+    }
+    input{
+        height: 30px;
+    }
+    #addEPrescrtion label {
+        font-size: small;
+    }
+    #addEPrescrtion div:nth-child(1){
+        width: 100%;
+    }
+    #addEPrescrtion div div:nth-child(1),#addEPrescrtion div div:nth-child(2){
+        width: 45%;
+    }
+    #addEPrescrtion div div:nth-child(1){
+        margin-right: 10%;
+    }
+    .wrap{
+        height: 700px;
+    }
+    .Prescriptions, .EPrescriptions{
+        padding-bottom: 50px;
+    }
+
+
+}
+@media only screen and (orientation:portrait) and (max-width: 380px)
+{
+    .item{
+        padding: 10px 10px;
+    }
+    .header{
+        padding: 0px 10px;
+    }
+    .viewBtn, .acceptBtn, .cancelBtn, .removeBtn{
+        height: 30px;
+    }
+    #addPrescription div, #LBDialogBox div{
+        flex-direction: column;
+
+    }
+    #addPrescription, #LBDialogBox {
+        top: 30px;
+    }
+    .reportsWrapper{
+        height: fit-content;
+    }
+    .pDetails {
+        height: 401px;
+        margin: -22px;
+    }
+    .profilePic{
+        padding-bottom: 2%;
+    }
+    .optionsForDoc i{
+        font-size: large;
+        margin-left:5px;
+        height: 41px;
+    }
+    
+}
+@media only screen and (orientation:portrait) and (max-width: 325px){
+    #addPrescription, #LBDialogBox {
+        padding: 49px 16px;
+    }
+    #addPrescription div .addBtn, #addPrescription div .closeBtn, #LBDialogBox div .addBtn, #LBDialogBox div .closeBtn{
+        margin-left: 0px;
+    }
+    .profilePic img {
+        height: 130px;
+        width: 130px;
+    }
+    .profilePic .edit {
+        font-size: large;
+    }
+    .pDetails {
+        height: 404px;
+        margin: -13px;
+    }
+    .pDetails span {
+        font-size: 16px;
+        min-width: 101px;
+    }
+    .details{
+        line-height: 50px;
+    }
+    #name {
+        font-size: 30px;
+    }
+    .viewEPrescrtion, #addEPrescrtion {
+        top: 53px;
+    }
+}
+@media only screen and (orientation:portrait) and (max-width: 365px)
+{
+    .header{
+        font-size: small;
+    }
+    .heading{
+        font-size: large;
+    }
+    .viewBtn, .acceptBtn, .cancelBtn, .removeBtn{
+        height: 30px;
+    }
+    #addPrescription, #LBDialogBox {
+        top:24px;
+    }
+}
+@media only screen and (orientation: landscape) and (max-width: 1370px)
+{
+    .div2
+    {
+    background-position: -159px 124px !important;}
+}
+@media only screen and (orientation: landscape) and (max-width: 1375px){
+    #addEprescription{
+        margin: 22px;
+    }    
+
+}
+@media only screen and (orientation: landscape) and (max-width: 1025px)
+{
+   .div1Wrapper{
+       width: 21%;
+   }
+   .div2{
+       width: 79%;
+       background-image: none !important;
+
+   }
+   #addEprescription{
+       margin: 18px;
+   }
+}
+@media only screen and (orientation: landscape) and (max-width: 825px)
+{
+    .heading{
+        font-size: xx-large;
+    }
+    .header{
+        font-size: medium;
+    }
+    .item{
+        font-size: small;
+    }
+    .item .sno {
+        max-width: 56.1px;
+        min-width: 56.1px;
+    }
+    .common{
+        font-size: medium;
+        margin: 20px 15px;
+    }
+    .common i{
+        font-size: 19px;
+        margin-right: 10px;
+    }
+    #addPrescription, #LBDialogBox {
+       top: 95px;
+    }
+    #addPrescription div, #LBDialogBox div {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .viewEPrescrtion, #addEPrescrtion {
+        top: 102px;
+    }
+    
+}
+
+@media only screen and (orientation: landscape) and (max-width: 740px)
+{
+   .common{
+       font-size: small;
+       margin: 20px 10px;
+   }
+   .name{
+       margin-bottom: 30px;
+   }
+   #addPrescription, #LBDialogBox {
+    top: 80px;
+}
+}
+@media only screen and (orientation: landscape) and (max-width: 680px)
+{
+    .common i{
+        font-size: 16px;
+    }
+    .item .sno {
+        max-width: 41.15px;
+        min-width: 41.15px;
+    }
+    .div1Wrapper {
+        width: 23%;
+    }
+    .div2{
+        width: 77%;
+    }
+    #addPrescription, #LBDialogBox {
+        top: 88px;
+    }
+}
+
+@media only screen and (max-width:900px) {
+    .activeBar{
+        display: block !important;
+    }
+    .nav-btn{
+        display: none;
+    }
+    .burger-nav {
+        display: flex;
+        color: white;
+        font-size: xx-large;
+        padding: 15px 15px 0px 0px;
+        
+    }
+    .icons{
+        display: flex;
+        flex-direction: row;
+    }
+    .nav-btn-slide {
+        display: none;
+        padding-top: 60px;
+        background-color: #aae4d7e3;
+        padding-bottom: 15px;
+        transition: all 2s;
+        position: absolute;
+        backdrop-filter: blur(10px);
+    }
+    .nav-btn-slide li{
+        list-style: none;
+        margin: 20px;
+        border-bottom: 3px double white;
+    }
+    .nav-btn-slide ul a{
+        color: white;
+        text-decoration: none;
+        font-size: large;
+        font-weight: 500;
+        padding-left: 15px;
+    }
+    #searchBtnMobile{
+        display: flex;
+        font-size: x-large;
+        height: fit-content;
+        margin-right: 25px;
+        padding-top: 20px;
+    }
+    
+    .search{
+        position: absolute;
+        top: 60px;
+        width: 100%;
+        background: #60cbb3;
+        height: 50px;
+        justify-content: center;
+        align-items: center;
+        display: none;
+        z-index: 5;
+    }
+    
+}

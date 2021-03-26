@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pending Request</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+        crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+        integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/profile.css">
+    <link rel="stylesheet" href="/css/profileQuery.css">
+</head>
+
+<body>
+    <div class="page">
+        <div class="container">
+            <div class="nav-bar">
+                <div class="logo dj a"><a href="/">Horizon</a></div>
+                <div id="headerWrap">
+
+                    <div class="search"><input type="text" name="" id="SearchInput" placeholder="Search"><i
+                            class="fas fa-search" id="searchBtn"></i></div>
+
+                    <div class="nav-btn ">
+                        <ul>
+                            <li><a class="" href="/p/contact">Contact</a></li>
+                            <li><a class="" href="/p/emergency">Emergency</a></li>
+                        </ul>
+                    </div>
+                    <div class="icons">
+                        <i class="fas fa-search" id="searchBtnMobile"></i>
+                        <div class="burger-nav">
+                            <i class="fas fa-bars"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-btn-slide ">
+                <ul>
+                    <li><a class="" href="/p/pendingRequest">Pending Request</a></li>
+                    <li><a class="" href="/p/doctorList">Doctor's List</a></li>
+                    <li><a class="" href="/p/contact">Contact</a></li>
+                    <li><a class="" href="/p/emergency">Emergency</a></li>
+                    <li><a class="" href="/p/logout">Logout</a></li>
+                </ul>
+            </div>
+            <div class="div1Wrapper">
+                <div class="div1">
+                    <div class="photo"><img src="<%- user.pImage %>" alt="" class="photo"></div>
+                    <div class="name">
+                        <%- user.name %>
+                    </div>
+                    <div class="common" id="option1">
+                        <i class="fas fa-user-circle"></i>Profile
+                    </div>
+                    <div class="common" id="option2"><i class="fas fa-flask"></i></i>Lab Report</div>
+                    <div class="common" id="option3"><i class="fas fa-prescription"></i>Prescription</div>
+                    <div class="common" id="option4"><i class="fas fa-file-prescription"></i>E-prescription</div>
+                    <div class="common" id="option5"><i class="fas fa-hourglass-start"></i>Pending Request</div>
+                    <div class="common" id="option7"><i class="fas fa-user-md"></i>Doctors</div>
+                    <div class="common" id="option6"><i class="fas fa-sign-out-alt"></i>Logout</div>
+
+                </div>
+            </div>
+            <div class="div2">
+
+                <div class="first">
+                    <div class="heading">Pending Requests </div>
+                </div>
+                <div class="second">
+                    <div class="seePendingReq">
+
+                        <div class="header">
+                            <div class="sno">S. No.</div>
+                            <div class="dname">Doctor's Name</div>
+                            <div class="department">Department</div>
+                            <div class="accept">Accept</div>
+                            <div class="Cancel">Cancel</div>
+                        </div>
+                        
+                    </div>
+
+                    <div class="options">
+                        <i class="fas fa-flask" id="showLB"></i>
+                        <i class="fas fa-prescription" id="showPres"></i>
+                        <i class="fas fa-file-prescription" id="showEpres"></i>
+                        <i class="fas fa-user-circle" id="showProfile"></i>
+                    </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+    </div>
+    <script src="/js/patientProfile.js"></script>
+    <script src="/js/pendingReq.js"></script>
+    <script src="/js/header.js"></script>
+    <script src="/js/patientSearch.js"></script>
+    <script src="/js/MenuOptionsForpatient.js"></script>
+    <script src="/js/SearchMobileView.js"></script>
+
+
+</body>
+
+</html>
